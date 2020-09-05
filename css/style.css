@@ -100,7 +100,7 @@ img {
 	color: #000;
 }
 #navigation li.active a {
-	color: #f99600;
+	color: #000;
 }
 #homeTop {
 	background: url(../images/bg-homeTop.jpg) repeat-x left top;
@@ -110,11 +110,11 @@ img {
 #homeTop > div {
 	width: 800px;
 	margin: 0 auto;
-	padding: 0 80px;
+	/*padding: 0 80px;*/
 }
 #homeTop > div img {
 	float: right;
-	margin-left: 60px;
+	/*margin-left: 60px;*/
 }
 #homeTop h1, #homeTop h2 {
 	color: #2c2c2c;
@@ -127,11 +127,13 @@ img {
 	font-size: 30px;
 	line-height: 36px;
 	text-transform: none;
+	text-align: center;
 }
 #homeTop p {
 	font-size: 16px;
 	line-height: 24px;
 	margin: 0;
+	text-align: center;
 }
 #homeTop p span {
 	display: block;
@@ -409,4 +411,22 @@ p a {
 }
 #connect a.tumbler:hover {
 	background-position: -40px -120px;
+}
+
+
+
+.button {
+	padding: 16px 42px;
+	background: #eee;
+	border-radius: 30px;
+}
+
+.buttonActive {
+	padding: 16px 42px;
+	background: #dbdbdb;
+	border-radius: 30px;
+}
+
+.button:hover{
+	background: #dbdbdb;
 }
