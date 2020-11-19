@@ -19,6 +19,7 @@
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 	<title>Home - Andrew Schalk</title>
 	
@@ -35,7 +36,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-link active" href="index">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link active" href="home">Home <span class="sr-only">(current)</span></a>
 					<a class="nav-link" href="projects">Projects</a>
 					<a class="nav-link" href="about">About</a>
 					<a class="nav-link" href="contact">Contact</a>
@@ -75,50 +76,57 @@
 			<!--Content Header Mobile-->
 			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-sm-none" style="margin-top:-72%;">
 				<div class="row d-flex justify-content-center">
-					<h1 class="mr-md-5 mb-3 text-light text-responsive-large align-self-center d-none d-sm-block"> Andrew&nbspSchalk</h1>
 					<img class="ml-md-5 d-flex col-7 rounded-circle justify-content-end" src="./images/andrewschalk.png" alt="Andrew Schalk">
-					<h1 class="mr-md-5 mt-3 text-light text-responsive-large align-self-center d-sm-none"> Andrew&nbspSchalk</h1>
+					<h1 class="mr-md-5 mt-3 text-light text-responsive-large align-self-center d-sm-none col-12 text-center "> Andrew&nbspSchalk</h1>
 				</div>
 			</div>
 			
-			<!-- Carousel -->
-			<div id="myCarousel" class="carousel slide col-sm-6 col-lg-4 mx-auto mb-5" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner">
-					<a class="carousel-item active btn" href="projects">
-						<img src="./images/guitar-body.jpg" class=" w-100" alt="Guitar Body">
-						<div class="carousel-caption">
-							<h5 class="text-responsive-medium">First slide label</h5>
-							<p class="text-responsive-small">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-						</div>
+			<div class="row col-md-11 col-lg-8 mx-auto">
+				<div class="col-12 col-md-4">
+					<h2 class="text-light mx-auto text-center">Lorem ipsum dolor sit</h2>
+					<p class="text-light mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare quam viverra orci sagittis eu.
+					</p>
+				</div
+			
+				<!-- Carousel -->
+				<div id="myCarousel" class="carousel slide col-sm-10 col-md-8 col-lg-8 mx-auto mb-5" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<a class="carousel-item active btn" href="projects">
+							<img src="./images/guitar-body.jpg" class=" w-100" alt="Guitar Body">
+							<div class="carousel-caption">
+								<h5 class="text-responsive-medium">First slide label</h5>
+								<p class="text-responsive-small">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+							</div>
+						</a>
+						<a class="carousel-item btn" href="projects">
+							<img src="./images/guitar-bracing.jpg" class=" w-100" alt="Guitar Bracing">
+							<div class=" carousel-caption">
+								<h5 class="text-responsive-medium">Second slide label</h5>
+								<p class="text-responsive-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</a>
+						<a class="carousel-item btn" href="projects">
+							<img src="./images/hair-thing.jpg" class=" w-100" alt="Hair Thing">
+							<div class=" carousel-caption">
+								<h5 class="text-responsive-medium">Third slide label</h5>
+								<p class="text-responsive-small">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+							</div>
+						</a>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
 					</a>
-					<a class="carousel-item btn" href="projects">
-						<img src="./images/guitar-bracing.jpg" class=" w-100" alt="Guitar Bracing">
-						<div class=" carousel-caption">
-							<h5 class="text-responsive-medium">Second slide label</h5>
-							<p class="text-responsive-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</a>
-					<a class="carousel-item btn" href="projects">
-						<img src="./images/hair-thing.jpg" class=" w-100" alt="Hair Thing">
-						<div class=" carousel-caption">
-							<h5 class="text-responsive-medium">Third slide label</h5>
-							<p class="text-responsive-small">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-						</div>
+					<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
 					</a>
 				</div>
-				<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
 			</div>
 		</div>
 		
