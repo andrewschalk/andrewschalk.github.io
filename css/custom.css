@@ -1,12 +1,13 @@
 html,
 body {
 	font-family: 'Varela Round', sans-serif;
-	background-color: #36393f;
+	/*background-color:#36393F;*/
+	background-color:#1f2833;
 	height:100%
 }
 
 .bg-dark{
-	background-color:#202225!important;
+	background-color:#0b0c10!important;
 }
 
 #page-content {
@@ -40,4 +41,12 @@ body {
 
 .card:hover {
 	background-color: #fff;
+}
+
+.text-muted {
+	color:#c5c6c7 !important;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
 }
