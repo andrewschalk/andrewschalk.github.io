@@ -48,20 +48,21 @@
 		<div id="page-content" class="page-content-top">
 		
 			<!-- Header Background Video-->
-			<video class="d-none d-lg-block" autoplay muted loop id="myVideo" width=100% poster="images/mill-loading.png">
-				<source src="./images/test-mill.mp4" type="video/mp4" loading="lazy">
-				Your browser does not support HTML5 video.
-			</video>
+			<div class="p-0 m-0 col-12 d-none d-lg-block overflow-hidden" style="height:50vh;">
+				<video class="d-none d-lg-block centered-overflow" autoplay muted loop id="myVideo" poster="images/mill-loading.png" style="min-height:50vh; min-width:100%;">
+					<source src="images/mill.mp4" type="video/mp4" loading="lazy">
+				</video>
+			</div>
 			
 			<!--Header Background Images-->
 			<img class=" d-none d-sm-block d-lg-none" src="./images/mill.png" alt="Mill" width="100%">
 			<img class=" d-sm-none" src="./images/mill-mobile.png" alt="Mill" width="100%">
 
 			<!--Content Header Desktop-->
-			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-none d-lg-block" style="margin-top:-27.1%;">
+			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-none d-lg-block" style="margin-top:-47.5vh;">
 				<div class="row d-flex justify-content-center">
 					<h1 class="mr-md-5 mb-3 text-light text-responsive-large align-self-center d-none d-sm-block"> Andrew&nbspSchalk</h1>
-					<img class="ml-md-5 d-flex col-sm-6 col-lg-4 rounded-circle justify-content-end" src="./images/andrewschalk.png" alt="Andrew Schalk">
+					<img class="ml-md-5 d-flex rounded-circle justify-content-end" src="./images/andrewschalk.png" alt="Andrew Schalk" style="max-height:45vh;">
 				</div>
 			</div>
 			
@@ -81,7 +82,12 @@
 				</div>
 			</div>
 			
-			<div class="row col-md-11 col-lg-8 mx-auto">
+			<!--<div class="container row mx-auto">
+				<a type="button" class="btn btn-lg btn-dark mx-auto" href="about">Learn More About Me</a>
+			</div>-->
+			
+			<!-- Main Description-->
+			<div class="row col-md-11 col-lg-9 mx-auto">
 				<div class="col-12 col-md-4 col-xl-8 mt-md-3 mt-lg-5 mb-xl-5 mx-auto">
 					<h2 class="text-muted mx-auto text-center">Lorem ipsum dolor sit</h2>
 					<p class="text-muted mx-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare quam viverra orci sagittis eu.
