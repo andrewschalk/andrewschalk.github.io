@@ -11,6 +11,9 @@
 	<!-- Javascript-->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	
+	
+
 
     <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -55,22 +58,24 @@
 			</div>
 			
 			<!--Header Background Images-->
-			<img class=" d-none d-sm-block d-lg-none" src="./images/mill.png" alt="Mill" width="100%">
+			<div class=" p-0 m-0 col-12 overflow-hidden d-none d-sm-block d-lg-none" style="height:40vh;">
+				<img class=" d-none d-sm-block d-lg-none centered-overflow" src="./images/mill.png" alt="Mill" style="min-height:40vh; min-width:100vw; max-width:100vw;">
+			</div>
 			<img class=" d-sm-none" src="./images/mill-mobile.png" alt="Mill" width="100%">
 
 			<!--Content Header Desktop-->
-			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-none d-lg-block" style="margin-top:-47.5vh;">
-				<div class="row d-flex justify-content-center">
+			<div class="justify-content-center mx-auto col-sm-12 col-lg-12 mb-5 d-none d-lg-block" style="margin-top:-47.5vh;">
+				<div class="row justify-content-center" style="height:45vh;">
 					<h1 class="mr-md-5 mb-3 text-light text-responsive-large align-self-center d-none d-sm-block"> Andrew&nbspSchalk</h1>
-					<img class="ml-md-5 d-flex rounded-circle justify-content-end" src="./images/andrewschalk.png" alt="Andrew Schalk" style="max-height:45vh;">
+					<img id="profileImageDesktop" class="ml-md-5 rounded-circle justify-content-end mt-auto mb-auto" src="./images/andrewschalk.png" alt="Andrew Schalk">
 				</div>
 			</div>
 			
 			<!--Content Header Tablet-->
-			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-none d-sm-block d-lg-none" style="margin-top:-51%;">
-				<div class="row d-flex justify-content-center">
-					<h1 class="mr-md-5 mb-3 text-light text-responsive-large align-self-center d-none d-sm-block"> Andrew&nbspSchalk</h1>
-					<img class="ml-md-5 d-flex col-sm-6 col-lg-4 rounded-circle justify-content-end" src="./images/andrewschalk.png" alt="Andrew Schalk">
+			<div class="justify-content-center mx-auto col-sm-12 col-lg-10 mb-5 d-none d-sm-block d-lg-none" style="margin-top:-40vh;">
+				<div class="row d-flex justify-content-center mb-auto mt-auto" style="height:40vh;">
+					<h1 class="mr-md-3 mb-3 text-light text-responsive-large align-self-center d-none d-sm-block pr-2"> Andrew&nbspSchalk</h1>
+					<img id="profileImageTablet" class="ml-md-3 d-flex col-sm-6 col-lg-4 rounded-circle justify-content-end p-0 pl-2 mt-auto mb-auto" src="./images/andrewschalk.png" alt="Andrew Schalk">
 				</div>
 			</div>
 			
@@ -141,6 +146,55 @@
 			<div class="container text-center">
 				<small class="text-muted">Use of this site constitutes acceptance of our <a  class="text-light" href="userAgreement">User Agreement</a> and <a class="text-light" href="privacyPolicy">Privacy Policy</a>. ©&nbsp2020&nbspAndrew&nbspSchalk</small>
 			</div>
-		</footer>	
+		</footer>
+
+		<script>
+			fitElementSize(document.getElementById("profileImageTablet"), 35, 40)
+			fitElementSize(document.getElementById("profileImageDesktop"), 45, 50)
+			
+			//Runs fitElementSize() on the profile image when the window is resized
+			document.getElementsByTagName("BODY")[0].onresize = function() {
+				fitElementSize(document.getElementById("profileImageTablet"), 35, 40); 
+				fitElementSize(document.getElementById("profileImageDesktop"), 45, 50);
+			};
+		
+			/*
+			* Returns the smaller of 2 numerical values. If the values are equal, returns the second value.
+			*/
+			function minAmt(value1, value2){
+				if(value1 < value2){
+					return value1;
+				}
+				return value2;
+			}
+		
+			/*
+			* Returns value equal to CSS vh
+			*/
+			function vh(v){
+				var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+				return (v * h) / 100;
+			}
+		
+			/*
+			* Returns value equal to CSS vw
+			*/
+			function vw(v){
+				var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+				return (v * w) / 100;
+			}
+		
+			/*
+			* Sets the max-height and max-width of the given element to the smaller of the given height value and width value.
+			* Height and width are in percentage of screen size.
+			*/
+			function fitElementSize(myElement, height, width){
+				height   = vh(height);
+				width    = vw(width);
+				newValue = minAmt(height, width);
+				myElement.style.maxHeight = String(newValue)+ "px";
+				myElement.style.maxWidth  = String(newValue) +"px";
+			}
+		</script>
 	</body>
 </html>
