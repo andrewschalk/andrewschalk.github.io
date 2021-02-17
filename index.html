@@ -8,7 +8,7 @@
 	<meta content='https://andrewschalk.com/images/andrewschalk.png' property='og:image'>
 	<link rel="icon" type="image/png" href="images/logo-box-dark.png">
 	
-	<!-- Bootstrap Javascript-->
+	<!-- Javascript-->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	
@@ -59,7 +59,7 @@
 			
 			<!--Header Background Images-->
 			<div class=" p-0 m-0 col-12 overflow-hidden d-none d-sm-block d-lg-none" style="height:40vh;">
-				<img class=" d-none d-sm-block d-lg-none centered-overflow" src="./images/mill.png" alt="Mill" style="min-height:40vh; width:100vw;">
+				<img class=" d-none d-sm-block d-lg-none centered-overflow" src="./images/mill.png" alt="Mill" style="min-height:40vh; min-width:100vw; max-width:100vw;">
 			</div>
 			<img class=" d-sm-none" src="./images/mill-mobile.png" alt="Mill" width="100%">
 
@@ -87,17 +87,17 @@
 				</div>
 			</div>
 			
-			<div class="row col-md-11 col-lg-9 mx-auto">
+			<!--<div class="container row mx-auto">
+				<a type="button" class="btn btn-lg btn-dark mx-auto" href="about">Learn More About Me</a>
+			</div>-->
 			
-				<!-- Main Description-->
+			<!-- Main Description-->
+			<div class="row col-md-11 col-lg-9 mx-auto">
 				<div class="col-12 col-md-4 col-xl-8 mt-md-3 mt-lg-5 mb-xl-5 mx-auto">
-					<h2 class="text-muted text-center">This website is still under construction</h2>
-					<p class="text-muted text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare quam viverra orci sagittis eu.
+					<h2 class="text-muted mx-auto text-center">Hi, welcome to my website!</h2>
+					<p class="text-muted mx-auto text-center">This website is a collection of the things I do that I find interesting. Robotics, 3D printing, metalworking, woodworking, and computer science are some of the areas I do work in.
 					</p>
-					<div class="container">
-						<a type="button" class="btn-lg btn-dark" href="about">Learn More About Me</a>
-					</div>
-				</div>
+				</div
 			
 				<!-- Carousel -->
 				<div id="myCarousel" class="carousel slide col-sm-10 col-md-8 col-lg-8 mx-auto mb-5" data-ride="carousel">
@@ -108,24 +108,31 @@
 					</ol>
 					<div class="carousel-inner">
 						<a class="carousel-item active btn" href="projects">
-							<img src="./images/guitar-body.jpg" class=" w-100" alt="Guitar Body">
+							<img src="./images/robot.png" class=" w-100" alt="Robot">
 							<div class="carousel-caption">
-								<h5 class="text-responsive-medium">First slide label</h5>
-								<p class="text-responsive-small">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+								<h5 class="text-responsive-medium">Robotics</h5>
+								<p class="text-responsive-small">See my work with FRC team 4931 and other robots.</p>
 							</div>
 						</a>
 						<a class="carousel-item btn" href="projects">
 							<img src="./images/guitar-bracing.jpg" class=" w-100" alt="Guitar Bracing">
 							<div class=" carousel-caption">
-								<h5 class="text-responsive-medium">Second slide label</h5>
-								<p class="text-responsive-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<h5 class="text-responsive-medium">Wookworking</h5>
+								<p class="text-responsive-small">See my woodworking projects including my progress on an acoustic guitar from scratch.</p>
 							</div>
 						</a>
 						<a class="carousel-item btn" href="projects">
 							<img src="./images/hair-thing.jpg" class=" w-100" alt="Hair Thing">
 							<div class=" carousel-caption">
-								<h5 class="text-responsive-medium">Third slide label</h5>
-								<p class="text-responsive-small">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+								<h5 class="text-responsive-medium">Metalworking</h5>
+								<p class="text-responsive-small">See my work as a blacksmith and machinist.</p>
+							</div>
+						</a>
+						<a class="carousel-item btn" href="projects">
+							<img src="./images/rocky-fork-fun.jpg" class=" w-100" alt="Rocky Fork Farm">
+							<div class=" carousel-caption">
+								<h5 class="text-responsive-medium">Metalworking</h5>
+								<p class="text-responsive-small">See my work as a blacksmith and machinist.</p>
 							</div>
 						</a>
 					</div>
@@ -149,7 +156,6 @@
 		</footer>
 
 		<script>
-			//Initial fit element has to be ran when the page is loaded.
 			fitElementSize(document.getElementById("profileImageTablet"), 35, 40)
 			fitElementSize(document.getElementById("profileImageDesktop"), 45, 50)
 			
@@ -187,16 +193,14 @@
 		
 			/*
 			* Sets the max-height and max-width of the given element to the smaller of the given height value and width value.
-			* Height and width are in percentage of screen height/width respectively.
+			* Height and width are in percentage of screen size.
 			*/
 			function fitElementSize(myElement, height, width){
 				height   = vh(height);
 				width    = vw(width);
 				newValue = minAmt(height, width);
-				
-				// Adding px to the end of the string specifies the units as CSS px.
-				myElement.style.maxHeight = String(newValue) + "px";
-				myElement.style.maxWidth  = String(newValue) + "px";
+				myElement.style.maxHeight = String(newValue)+ "px";
+				myElement.style.maxWidth  = String(newValue) +"px";
 			}
 		</script>
 	</body>
